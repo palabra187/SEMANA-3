@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    
+}
+
+.header{
+    height: 120px;
+    background-color: #9833cc;
+    color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.main{
+    padding: 20px;
+    /* Cuando pones un display: flex; por defecto , en invicible tienes un 
+    flex-direction : row; solo que no se ve , pero esta ahi */
+    display: flex;
+    flex-wrap: wrap;
+    /* ¿Qué significa  flex-wrap: wrap;?
+    
+La propiedad flex-wrap: wrap; es una regla de CSS que se aplica a elementos que están contenidos dentro de un contenedor con display: flex.
+Cuando se establece flex-wrap: wrap;, se está indicando que los elementos flexibles pueden envolverse en múltiples líneas si no hay suficiente
+espacio disponible en el contenedor para mostrarlos en una sola línea. Esto significa que los elementos flexibles pueden fluir hacia abajo 
+(o hacia arriba, dependiendo de la dirección principal) en nuevas líneas dentro del contenedor flex cuando se alcanza el límite de ancho del contenedor.
+Por ejemplo, si tienes una fila de elementos dentro de un contenedor flex y estableces flex-wrap: wrap;, si el contenedor se hace más estrecho que el ancho 
+total de los elementos en la fila, los elementos se envolverán hacia abajo en líneas adicionales dentro del contenedor para ajustarse al espacio disponible.
+En resumen, flex-wrap: wrap; permite que los elementos flexibles se envuelvan en múltiples líneas dentro de un contenedor flex cuando sea necesario para ajustarse al espacio disponible. */
+    
+
+}
+
+.main__titles{
+    width: 240px;
+}
+
+.main__questions{
+    width: 240px;
+    background-color: #34b4e5;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: #f9f9f9;
+}
+
+.main__content{
+    /* ¿Que significa esta propiedad?
+    Ustedes saben que los hijos flexibles tienen varias formas particularmente
+    dos formas , un de las formas es definiendo su ancho la propiedad 
+    flex: 1; que es el hijo flex 
+    ¿Que significa el 1?
+    Es el valor , es el peso que va a tener para distribuirse , para 
+    con sus hermanos flexibles.
+    flex:1 ; siginifica que va a tener la propiedad de crecer y de encogerse 
+    el elemento en relacion a una unidad dividida entre 3 , los elementos que ocupa
+    el papa  */
+    
+    flex: 1;
+    padding: 25px;
+}
+
+
+.main__item{
+    background-color: #34b4e5;
+    padding: 8px;
+    margin-bottom: 10px;
+    color: #f9f9f9;
+}
+
+.main__question {
+    padding: 16px;
+    text-align: center;
+}
+
+.question__title {
+    margin-bottom: 16px;
+}
+
+.footer {
+    height: 120px;
+    background-color: #34b4e5;
+    color: #f9f9f9;
+    display: flex;
+    /* align-items: center; Este pertenece al eje Y */
+    align-items: center; 
+    /* justify-content: center; Este pertenece al eje X */
+    justify-content: center;
+}
+
+/* .footer__text{
+     background-color: red; } */
+
+@media (max-width: 768px) {
+     /* ¿Por que al @ media ( max width: 768px) se le da  la medida max de 768px?
+     
+     La regla @media (max-width: 768px) se utiliza comúnmente en CSS para aplicar estilos 
+     específicos cuando la pantalla tiene un ancho máximo de 768 píxeles o menos. Esta 
+     medida se elige porque es un punto comúnmente utilizado para identificar dispositivos 
+     móviles, como smartphones y tablets en posición vertical.
+
+     El ancho de 768 píxeles es relevante porque corresponde aproximadamente al ancho de 
+     pantalla de dispositivos populares en posición vertical, como algunos modelos de iPhone 
+     y otros smartphones Android. También es un ancho común para tablets en posición vertical.
+     Al establecer reglas de estilo específicas para pantallas más pequeñas, como dispositivos
+     móviles, los diseñadores web pueden garantizar que sus sitios sean responsivos y se vean 
+     bien en una variedad de dispositivos y tamaños de pantalla. Esto mejora la experiencia
+     del usuario al adaptar el diseño y la disposición del contenido para ajustarse mejor a 
+     dispositivos más pequeños. */
+
+
+    .main__questions {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main__titles {
+        width: 100%;
+    }
+
+
+    .main__content {
+        width: 100%;
+        padding: 25px 0;
+    }
+    
+    .main__title {
+        margin-bottom: 16px;
+    }
+
+
+}

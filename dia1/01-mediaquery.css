@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #458996;
+}
+
+p{
+    color: #f0f0f0;
+}
+
+li{
+    display: inline-block;
+}
+
+.section{
+    width: 100%;
+}
+
+li{
+    display: block;
+}
+
+.main{
+    /* La propiedad display: flex ; tiene por defecto 2 propiedades : 
+    1. flex-direction : row;
+    2. flex-wrap : no-wrap; */
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.imagen-uno{
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+
+.section{
+    border: 1px solid red;
+    width: 25%;
+}
+
+nav img{
+    display: none;
+}
+@media (max-width: 768px) {
+    body{
+        background-color: #88aa00;
+    }
+
+    .section{
+        width: 50%;
+    }
+     /* Displa:none --> Desaparece un elemento del DOM ,lo quita  */
+     /* ¿Que es lo que hace el opacity? --> Ponerle invisible a un elemento; mas no
+     desaparecerlo del DOM  */
+
+
+
+    li{
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    /* ¿Que significa max-width y min-width?
+    Como cuando maximo de ancho tenga max-width: 480px vamos a tener
+    este color : background-color: #55442a; */
+    body{
+        background-color: #55442a;
+    }
+
+    .section {
+        width: 100%;
+    }
+
+    ul{
+        display: none;
+    }
+
+    nav img{
+        display: inline-block;
+    }
+}
